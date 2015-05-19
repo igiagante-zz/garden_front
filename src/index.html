@@ -1,10 +1,23 @@
 <!doctype html>
 <html ng-app="gardenFront">
   <head>
+
     <meta charset="utf-8">
-    <title>gardenFront</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="igiagante">
+
+    <title>Garden</title>
+
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet"  src="bower_components/magnific-popup/dist/magnific-popup.js"></>
+
+    <!-- Custom styles for this template -->
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -25,7 +38,194 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+    <section id="container" >
+      <!-- ********************* TOP BAR CONTENT & NOTIFICATIONS ************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>Gardens</b></a>
+        <!--logo end-->
+
+        <div class="nav notify-row" id="top_menu">
+          <!--  notification start -->
+          <ul class="nav top-menu">
+
+            <li> <a href="#">Garden 1 </a></li>
+            <li> <a href="#">Garden 2 </a></li>
+            <li> <a href="#">Garden 3 </a></li>
+
+            <!-- settings start -->
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                <i class="fa fa-tasks"></i>
+              </a>
+              <ul class="dropdown-menu extended tasks-bar">
+                <div class="notify-arrow notify-arrow-green"></div>
+                <li>
+                  <a href="index.html#">
+                    <div class="task-info">
+                      <div class="desc">DashGum Admin Panel</div>
+                      <div class="percent">40%</div>
+                    </div>
+                    <div class="progress progress-striped">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="external">
+                  <a href="#">State of Growing</a>
+                </li>
+              </ul>
+            </li>
+            <!-- settings end -->
+
+          </ul>
+          <!--  notification end -->
+        </div>
+        <div class="top-menu">
+          <ul class="nav pull-right top-menu">
+            <li><a class="logout" href="login.html">Logout</a></li>
+          </ul>
+        </div>
+      </header>
+      <!--header end-->
+
+      <!-- ******************** MAIN SIDEBAR MENU *************************************** -->
+      <!--sidebar start-->
+      <aside>
+        <div id="sidebar"  class="nav-collapse ">
+          <!-- sidebar menu start-->
+          <ul class="sidebar-menu" id="nav-accordion">
+
+            <p class="centered"><a href="profile.html"><img src="assets/images/ui-sam.jpg" class="img-circle" width="60"></a></p>
+            <h5 class="centered">Peryisa</h5>
+
+            <li class="mt">
+              <a class="active" href="index.html">
+                <i class="fa fa-dashboard"></i>
+                <span>Plants</span>
+              </a>
+            </li>
+
+            <li class="sub-menu">
+              <a href="javascript:;" >
+                <i class="fa fa-cogs"></i>
+                <span>Irrigations</span>
+              </a>
+            </li>
+
+            <li class="sub-menu">
+              <a href="javascript:;" >
+                <i class="fa fa-cogs"></i>
+                <span>Dosis</span>
+              </a>
+            </li>
+
+            <li class="sub-menu">
+              <a href="javascript:;" >
+                <i class="fa fa-cogs"></i>
+                <span>Components</span>
+              </a>
+              <ul class="sub">
+                <li><a  href="calendar.html">Calendar</a></li>
+                <li><a  href="gallery.html">Gallery</a></li>
+                <li><a  href="todo_list.html">Todo List</a></li>
+              </ul>
+            </li>
+
+            <li class="sub-menu">
+              <a href="javascript:;" >
+                <i class=" fa fa-bar-chart-o"></i>
+                <span>Charts</span>
+              </a>
+              <ul class="sub">
+                <li><a  href="morris.html">Morris</a></li>
+                <li><a  href="chartjs.html">Chartjs</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <!-- sidebar menu end-->
+        </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!-- MAIN CONTENT -->
+
+      <!--main content start-->
+      <section id="main-content">
+        <section class="wrapper">
+            <div ng-view></div>
+        </section>
+      </section>
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+        <div class="text-center">
+          Peryisa Company
+          <a href="index.html#" class="go-top">
+            <i class="fa fa-angle-up"></i>
+          </a>
+        </div>
+      </footer>
+      <!--footer end-->
+    </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/jquery.sparkline/index.js"></script>
+    <script src="bower_components/jquery-nicescroll/jquery.nicescroll.js"></script>
+    <script src="bower_components/dcjqaccordion/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
+    <!--common script for all pages-->
+    <script src="assets/js/lib/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="assets/js/lib/sparkline-chart.js"></script>
+    <script src="assets/js/lib/jquery.scrollTo.min.js"></script>
+
+    <script type="application/javascript">
+      function myNavFunction(id) {
+        $("#date-popover").hide();
+        var nav = $("#" + id).data("navigation");
+        var to = $("#" + id).data("to");
+        console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+      }
+
+      $(document).ready(function() {
+        $('.popup-with-form').magnificPopup({
+          type: 'inline',
+          preloader: false,
+          focus: '#name',
+
+          // When elemened is focused, some mobile browsers in some cases zoom in
+          // It looks not nice, so we disable it:
+          callbacks: {
+            beforeOpen: function() {
+              if($(window).width() < 700) {
+                this.st.focus = false;
+              } else {
+                this.st.focus = '#name';
+              }
+            }
+          }
+        });
+      });
+
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

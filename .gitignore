@@ -8,4 +8,5 @@ dist/
 *~
 
 # ide
-.ide
+*.idea
+*.iml

@@ -4,7 +4,7 @@ angular.module('gardenFront', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize'
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/main/main.html',
+        templateUrl: 'app/partials/plantBoard.html',
         controller: 'MainCtrl'
       })
       .otherwise({
