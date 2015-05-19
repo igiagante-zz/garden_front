@@ -1,0 +1,11 @@
+# common
+node_modules/
+bower_components/
+.sass-cache/
+.tmp/
+dist/
+.DS_Store
+*~
+
+# ide
+.ide
