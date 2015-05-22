@@ -7,7 +7,8 @@ var gardenFront = angular.module('gardenFront')
 
       ModalService.showModal({
         templateUrl: 'app/components/form/form_plant.html',
-        controller: 'ModalController'
+        controller: 'ModalController',
+        windowClass: 'app-modal-window'
       }).then(function(modal) {
 
         modal.element.modal();

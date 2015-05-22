@@ -8,7 +8,8 @@ var app = angular.module('gardenFront',
     'restangular',
     'ngRoute',
     'ui.bootstrap',
-    'angularModalService']);
+    'angularModalService',
+    'blueimp.fileupload']);
 
 
 app.config(function ($routeProvider) {

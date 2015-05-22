@@ -1157,6 +1157,10 @@ PANELS CONFIGURATIONS
   border: 1px solid gray;
 }
 
+.app-modal-window .modal-dialog {
+  width: 500px;
+}
+
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
