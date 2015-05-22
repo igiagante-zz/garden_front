@@ -14,9 +14,17 @@ var app = angular.module('gardenFront',
 
 app.config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/plants', {
         templateUrl: 'app/partials/plantBoard.html',
         controller: 'MainCtrl'
+      })
+      .when('/irrigations', {
+        templateUrl: 'app/irrigations/irrigations.html',
+        controller: 'IrrigationsCtrl'
+      })
+      .when('/dosis', {
+        templateUrl: 'app/dosis/dosis.html',
+        controller: 'DosisCtrl'
       })
       .otherwise({
         redirectTo: '/'
