@@ -3,6 +3,8 @@
 var gardenFront = angular.module('gardenFront')
   .controller('MainCtrl', function ($scope, ModalService) {
 
+    $scope.queue = [];
+
     $scope.show = function() {
 
       ModalService.showModal({
