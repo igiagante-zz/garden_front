@@ -1195,6 +1195,35 @@ div.upload input {
   cursor: pointer;
 }
 
+.button-add-new-dosis {
+  background-color: #298390;
+  margin-bottom: 20px;
+}
+
+.input-dosis-rest {
+  width: 50%;
+  margin-left: 20px;
+}
+
+.container-table-dosis {
+  width: 70%;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.container-table-dosis > tr td{
+  width: 20%;
+}
+
+.container-table-dosis > tr td:first-child, tr td:last-child {
+  width: 30%;
+}
+
+.container-table-dosis > tr td:last-child button {
+  margin-left: 20px;
+}
+
+
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector

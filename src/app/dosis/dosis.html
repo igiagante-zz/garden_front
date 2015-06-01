@@ -1,3 +1,55 @@
+<h1>Dosis</h1>
 
-  <h1>Dosis</h1>
+<div data-ng-controller="DosisCtrl" class="container-table-dosis">
+
+  <button type="button" ng-click="addDosis()" class="btn button-add-new-dosis">
+    <i class="glyphicon glyphicon-plus">
+    </i> Add new dosis
+  </button>
+
+  <table st-table="rowCollection" class="table table-striped">
+    <thead>
+    <tr class="header-text-center">
+      <th >Date</th>
+      <th >Water</th>
+      <th>Ph Dosis</th>
+      <th>Ph</th>
+      <th>Ec</th>
+      <th>Nutrients</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <td style="align-: center"><input class="form-control" type="text"></td>
+    <td style="align-content: center"><input class="form-control input-dosis-rest" type="text"></td>
+    <td><input class="form-control input-dosis-rest" type="text"></td>
+    <td><input class="form-control input-dosis-rest" type="text"></td>
+    <td><input class="form-control input-dosis-rest" type="text"></td>
+    <td>
+      <button type="button" ng-click="" class="btn btn-sm btn-default">
+        <i class="glyphicon glyphicon-tint">
+        </i>
+      </button>
+    </td>
+
+    <tr ng-repeat="row in rowCollection"  class="text-center">
+      <td>{{row.date | date:'dd-MM-yyyy'}}</td>
+      <td>{{row.water}}</td>
+      <td>{{row.phDosis}}</td>
+      <td>{{row.ph}}</td>
+      <td>{{row.ec}}</td>
+      <td>{{row.nutrients}}</td>
+
+    </tbody>
+    <tfoot>
+    <tr>
+      <th><strong>TOTAL</strong></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </tfoot>
+  </table>
+</div>
+
 
