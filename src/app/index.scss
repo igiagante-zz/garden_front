@@ -1127,56 +1127,9 @@ PANELS CONFIGURATIONS
   border: 1px solid gray;
 }
 
-/* Lightbox */
-.box {
-  margin: 30px;
-  display: inline-block;
-  width: 130px;
-  height: 150px;
-  border: 1px solid gray;
-}
-
-.box .lightbox{
-  margin-top: 17px;
-  margin-left: 17px;
-  float: left;
-  width: 80px;
-  height: 105px;
-  border: 1px solid gray;
-}
-
-#name {
-  margin-left: 37px;
-  margin-top: 2px;
-  float: left;
-}
-
-.toolbar-plant {
-  width: 750px;
-  height: 50px;
-  border: 1px solid gray;
-}
-
 .app-modal-window .modal-dialog {
   width: 500px;
 }
-/*
-div.upload {
-  width: 157px;
-  height: 57px;
-  background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
-  overflow: hidden;
-}
-
-div.upload input {
-  display: block !important;
-  width: 157px !important;
-  height: 57px !important;
-  opacity: 0 !important;
-  overflow: hidden !important;
-}
-
-*/
 
 .fileinput-button-new {
   position: relative;
@@ -1193,6 +1146,13 @@ div.upload input {
   font-size: 200px;
   direction: ltr;
   cursor: pointer;
+}
+
+/* Toolbar */
+.toolbar-plant {
+  width: 750px;
+  height: 50px;
+  border: 1px solid gray;
 }
 
 .button-add-new-dosis {
@@ -1221,6 +1181,216 @@ div.upload input {
 
 .container-table-dosis > tr td:last-child button {
   margin-left: 20px;
+}
+
+/* Lightbox */
+.box {
+  margin: 30px;
+  display: inline-block;
+  width: 150px;
+  height: 170px;
+  border: 1px solid gray;
+  background-color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.box .lightbox{
+  margin-top: 20px;
+  margin-left: 17px;
+  float: left;
+  width: 80px;
+  height: 105px;
+
+}
+
+.box .lightbox img{
+  width: 100px;
+  height: 120px;
+  margin: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*
+  vertical bar - weeks
+*/
+
+.bar {
+  width: 10px;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.vertical-bar {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.week {
+  width: 100%;
+  height: 12px;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  color: gray;
+  color: rgb(252, 248, 248);
+  background-color: brown;
+  padding: 1px;
+}
+
+.state4 {
+  background-color: darkgreen;
+}
+
+.state3 {
+  background-color: rgb(213, 213, 19);
+}
+
+.state2 {
+  background-color: orange;
+}
+
+.state1 {
+  background-color: red;
+}
+
+.week-selected {
+  color: blue;
+}
+
+.bar .vertical .week {
+  border-color: #fff;
+}
+
+.week-selected {
+  color: #3f51b5;
+}
+
+.first-week {
+  border-radius: 4px 4px 0 0;
+}
+
+.last-week{
+  border-radius: 0 0 4px 4px;
+}
+
+ul {
+  display: block;
+}
+
+.week-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*
+  vertical bar - weeks
+*/
+
+.plant-text-ph-ec {
+  font-size: 14px;
+  position: absolute;
+  margin: 3px 22px;
+}
+
+.plant-name {
+  margin-left: 58px;
+  margin-top: 22px;
+  float: left;
+}
+
+#plant-button-name {
+  border: none;
+  padding: 0;
+  background: none;
+  font-family: SANS-SERIF;
+  font-weight: bold;
+}
+
+
+/* Tooltip */
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  width:140px;
+  color: #0F0F0F;
+  background: #FFFFFF;
+  border: 2px solid #2D4A27;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+  box-shadow: 2px -2px 3px #416B38;
+}
+a.tooltips span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -12px;
+  width: 0; height: 0;
+  border-right: 12px solid #2D4A27;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid #FFFFFF;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  left: 100%;
+  top: 50%;
+  margin-top: -15px;
+  margin-left: 15px;
+  z-index: 999;
+}
+
+/* modal */
+
+#overlay {
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  padding: 25px;
+  border: 2px solid black;
+  background-color: #ffffff;
+  width: 50%;
+  height: 50%;
+  z-index: 100;
+}
+#fade {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  background-color: black;
+  -moz-opacity: 0.7;
+  opacity: .70;
+  filter: alpha(opacity=70);
+  width: 100%;
+  height: 100%;
+  z-index: 90;
 }
 
 

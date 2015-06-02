@@ -18,7 +18,14 @@ var gardenFront = angular.module('gardenFront')
           $scope.message = "You said " + result;
         });
       });
+
     };
+
+    $scope.dynamicPopover = {
+      content: 'Ph: 6.5 Ec: 1.2  Count of trimmed: 2  Harvest: 18gr  Comments: alo',
+      title: 'Plant Detail'
+    };
+
   });
 
 gardenFront.controller('ModalController', function($scope, close) {
