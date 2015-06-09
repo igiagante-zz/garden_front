@@ -9,7 +9,13 @@ var app = angular.module('gardenFront',
     'ngRoute',
     'ui.bootstrap',
     'angularModalService',
-    'blueimp.fileupload']);
+    'blueimp.fileupload'])
+
+.config(function($compileProvider) {
+  var imgSrcSanitizationWhitelist = /^\s*(https?|ftp|file):|data:image\//;
+  $compileProvider.imgSrcSanitizationWhitelist(imgSrcSanitizationWhitelist);
+});
+
 
 
 app.config(function ($routeProvider) {
