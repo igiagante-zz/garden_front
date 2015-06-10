@@ -15,7 +15,7 @@ var gardenFront = angular.module('gardenFront')
 
         modal.element.modal();
         modal.close.then(function(result) {
-          $scope.message = "You said " + result;
+          $scope.message = 'You said ' + result;
         });
       });
 

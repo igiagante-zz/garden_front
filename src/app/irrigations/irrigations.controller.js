@@ -5,7 +5,7 @@
 
 'use strict';
 
-var gardenFront = angular.module('gardenFront')
+angular.module('gardenFront')
   .controller('IrrigationsCtrl', function ($scope) {
 
   });

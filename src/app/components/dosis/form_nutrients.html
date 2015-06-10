@@ -1,0 +1,24 @@
+<div class="form-nutrients">
+  <h5>Add nutrients for your Dosis</h5>
+
+  <table class="nutrients-table table table-striped">
+    <tr ng-repeat="row in nutrientsDosis">
+      <td>{{row.nutrient}}</td>
+      <td>{{row.count}}</td>
+      <td>
+        <button type="button" class="btn btn-sm btn-default" data-ng-click="deleteNutrient($index)">
+          <span>x</span>
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="form-inline">
+  <div class="form-group">
+      <input type="text" class="form-control" ng-model="selectedNutrient"
+             bs-options="nutrient for nutrient in nutrients" focus-me="shouldBeOpen"
+             placeholder="Enter nutrient" bs-typeahead>
+      <input type="text" class="form-control" placeholder="ML" ng-model="count" ng-enter="addNutrient()"/>
+    </div>
+    </div>
+</div>

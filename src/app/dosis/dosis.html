@@ -10,43 +10,37 @@
   <table class="table table-striped enter-block">
     <thead>
     <tr class="header-text-center">
-      <th >Date</th>
-      <th >Water</th>
-      <th>Ph Dosis</th>
-      <th>Ph</th>
-      <th>Ec</th>
-      <th>Nutrients</th>
+      <th class="table-head-text">Date</th>
+      <th class="table-head-text">Water</th>
+      <th class="table-head-text">Ph Dosis</th>
+      <th class="table-head-text">Ph</th>
+      <th class="table-head-text">Ec</th>
+      <th class="table-head-text">Nutrients</th>
     </tr>
     </thead>
     <tbody>
     <tr>
       <td>
-        <div class="container-picker">
-        <div ng-controller="DatepickerCtrl" class="datePicker">
 
-              <p class="input-group input-group-fix-size">
-                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate"
-                       max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                </span>
-              </p>
-            </div>
-        </div>
+          <div ng-class="{'has-error': datepickerForm.date.$invalid}">
+            <input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker data-date-format="dd-MM-yyyy">
+          </div>
       </td>
       <td>
-
           <input class="form-control input-dosis-rest" type="text">
-
       </td>
       <td><input class="form-control input-dosis-rest" type="text"></td>
       <td><input class="form-control input-dosis-rest" type="text"></td>
       <td><input class="form-control input-dosis-rest" type="text"></td>
       <td>
-        <button type="button" ng-click="" class="btn btn-sm btn-default">
-          <i class="glyphicon glyphicon-tint">
-          </i>
-        </button>
+        <div class="div-button-dosis">
+          <button type="button" ng-click="openNutrientForm()" class="btn btn-sm btn-default button-dosis"
+                  data-placement="right" data-type="info" data-body="{{tooltip.text}}"
+                  data-container="body"
+                  data-title="{{tooltip.title}}" data-trigger="hover" bs-tooltip="tooltip">
+            <i class="glyphicon glyphicon-tint"></i>a
+          </button>
+        </div>
       </td>
     </tr>
     <tr ng-repeat="row in rowCollection"  class="text-center">

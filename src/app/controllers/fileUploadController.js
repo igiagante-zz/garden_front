@@ -3,6 +3,8 @@
  */
 
 
+'use strict';
+
 angular.module('gardenFront')
   .controller('fileUploadCtrl', function ($scope, $http) {
 
@@ -28,7 +30,7 @@ angular.module('gardenFront')
     $scope.submit = function () {
       //upload only the files that haven't id
       angular.forEach($scope.queue, function (value, key) {
-        console.log(value);
+
       });
     };
 

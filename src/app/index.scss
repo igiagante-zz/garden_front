@@ -1160,10 +1160,6 @@ PANELS CONFIGURATIONS
   margin-bottom: 20px;
 }
 
-.input-dosis-rest {
-  width: 80%;
-}
-
 .container-table-dosis {
   width: 70%;
   padding-top: 50px;
@@ -1405,6 +1401,100 @@ a:hover.tooltips span {
 .datePicker{
   position: absolute;
 }
+
+.input-dosis-rest {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.table-head-text {
+  text-align: center;
+}
+
+.div-button-dosis {
+  position: relative;
+}
+
+.button-dosis {
+  position: absolute;
+  margin-left: 20%;
+}
+
+td {
+  padding: 10px;
+}
+
+tr td {
+  width: 100px !important;
+  padding-left: 10px !important;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+tr td:first-child {
+  margin-left: 10px !important;
+}
+
+tr td:first-child {
+  margin-right: 10px !important;
+}
+
+
+/* Datepicker */
+
+.datepicker.dropdown-menu {
+  width: 280px;
+  height: 280px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody {
+    height: 180px;
+  }
+  tbody button {
+    padding: 3px;
+  }
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+    tbody button {
+      height: 20px;
+    }
+  }
+}
+
+.timepicker.dropdown-menu {
+  padding: 0 4px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+}
+
+.ngdialog-content {
+  width: 330px !important;
+}
+
+.form-nutrients {
+  margin-left: 10px;
+  width: 260px;
+}
+
+.form-nutrients input{
+  padding-left: 10px;
+}
+
+.form-nutrients input:last-child {
+  width: 50px;
+}
+
+.form-nutrients table tr td button {
+  width: 20px;
+  padding: 0;
+}
+
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */

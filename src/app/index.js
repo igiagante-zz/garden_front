@@ -9,7 +9,10 @@ var app = angular.module('gardenFront',
     'ngRoute',
     'ui.bootstrap',
     'angularModalService',
-    'blueimp.fileupload'])
+    'blueimp.fileupload',
+    'mgcrea.ngStrap',
+    'ngDialog',
+    'gardenFront.directives'])
 
 .config(function($compileProvider) {
   var imgSrcSanitizationWhitelist = /^\s*(https?|ftp|file):|data:image\//;
