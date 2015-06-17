@@ -27,6 +27,18 @@ angular.module('gardenFront')
       }
     );
 
+    $scope.changeMainImage = function(file){
+
+      var files = $scope.queue;
+
+      for(var i = 0; i < files.length; i++){
+        files[i].main = false;
+      }
+      file.main = true;
+    };
+
+
+    /*
     $scope.submit = function () {
       //upload only the files that haven't id
       angular.forEach($scope.queue, function (value, key) {
@@ -38,5 +50,7 @@ angular.module('gardenFront')
       //clear files
       $scope.queue.splice(0, $scope.queue.length);
     };
+    */
+
 
   });
