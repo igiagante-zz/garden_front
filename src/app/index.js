@@ -35,10 +35,6 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/dosis/dosis.html',
         controller: 'DosisCtrl'
       })
-      .when('/gallery', {
-        templateUrl: 'app/partials/gallery.html',
-        controller: 'sliderCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
