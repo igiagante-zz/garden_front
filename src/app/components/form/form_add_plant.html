@@ -51,7 +51,17 @@
         </div>
           <div class="add-plant-image-container" >
 
+
+
             <div data-ng-controller="fileUploadMainCtrl">
+              
+
+            <span class="btn btn-success fileinput-button-new button-add-image" data-ng-class="{disabled: disabled}">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Add Image</span>
+                <input type="file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
+            </span>
+
               <b>Preview:</b><br />
               <i data-ng-hide="imageSrc">No image choosed</i>
               <img data-ng-src="{{imageSrc}}" /><br/>
@@ -59,12 +69,6 @@
               <progress value="{{progress}}"></progress>
             </div>
 
-
-            <span class="btn btn-success fileinput-button-new button-add-image" data-ng-class="{disabled: disabled}">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>Add Image</span>
-                <input type="file" data-ng-file-select="onFileSelect($files)" data-ng-model="imageSrc">
-            </span>
           </div>
 
         </form>

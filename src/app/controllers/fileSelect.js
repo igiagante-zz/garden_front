@@ -17,6 +17,8 @@ angular.module('gardenFront')
           .then(function(result) {
             $timeout(function() {
               $scope.ngModel = result;
+              console.log('$scope.ngModel: ' + $scope.ngModel);
+              console.log('result: ' + result);
             });
           });
       }
