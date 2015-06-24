@@ -12,7 +12,8 @@ var app = angular.module('gardenFront',
     'blueimp.fileupload',
     'mgcrea.ngStrap',
     'ngDialog',
-    'gardenFront.directives'])
+    'gardenFront.directives',
+    'ngDroplet'])
 
 .config(function($compileProvider) {
   var imgSrcSanitizationWhitelist = /^\s*(https?|ftp|file):|data:image\//;
@@ -24,8 +25,8 @@ var app = angular.module('gardenFront',
 app.config(function ($routeProvider) {
     $routeProvider
       .when('/plants', {
-        templateUrl: 'app/partials/plantBoard.html',
-        controller: 'MainCtrl'
+        templateUrl: 'app/plants/plants.html',
+        controller: 'PlantsCtrl'
       })
       .when('/irrigations', {
         templateUrl: 'app/irrigations/irrigations.html',

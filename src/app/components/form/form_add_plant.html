@@ -1,0 +1,78 @@
+<div class="modal fade">
+  <div class="modal-dialog modal-form-plant">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Add new plant</h4>
+      </div>
+      <div class="modal-body">
+
+        <form role="form" id="formAddPlant" method="POST" enctype="multipart/form-data" data-ng-controller="PlantsCtrl" class="form-add-plant">
+          <div class="add-plant-form-container">
+            <fieldset>
+
+              <!-- Text input-->
+              <div class="control-group">
+                <label class="control-label" for="water">Water:</label>
+                <div class="controls">
+                  <input id="water" name="water" type="text" placeholder="mL" class="input-medium" required>
+
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="control-group">
+                <label class="control-label" for="size">Size:</label>
+                <div class="controls">
+                  <input id="size" name="size" type="text" placeholder="cm" class="input-medium" required>
+
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="control-group">
+                <label class="control-label" for="phSoil">Ph Soil:</label>
+                <div class="controls">
+                  <input id="phSoil" name="phSoil" type="text" placeholder="0.0" class="input-medium" required>
+
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="control-group">
+                <label class="control-label" for="ecSoil">Ec Soil:</label>
+                <div class="controls">
+                  <input id="ecSoil" name="ecSoil" type="text" placeholder="0.0" class="input-medium" required>
+
+                </div>
+              </div>
+
+            </fieldset>
+        </div>
+          <div class="add-plant-image-container" >
+
+            <div data-ng-controller="fileUploadMainCtrl">
+              <b>Preview:</b><br />
+              <i data-ng-hide="imageSrc">No image choosed</i>
+              <img data-ng-src="{{imageSrc}}" /><br/>
+              <b>Progress:</b>
+              <progress value="{{progress}}"></progress>
+            </div>
+
+
+            <span class="btn btn-success fileinput-button-new button-add-image" data-ng-class="{disabled: disabled}">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Add Image</span>
+                <input type="file" data-ng-file-select="onFileSelect($files)" data-ng-model="imageSrc">
+            </span>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-ng-click="close('No')" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" data-ng-click="close('Yes')" class="btn btn-primary" data-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1546,6 +1546,55 @@ h1 {
   color: #222;
 }
 
+/* ---- form add plant ---- */
+
+.modal-form-plant{
+  width: 550px !important;
+}
+
+.form-add-plant{
+  display: inline-block;
+  margin-top: 15px !important;
+  margin-left: 15px !important;
+}
+
+.add-plant-form-container{
+  width: 45%;
+  float: left;
+  position: relative;
+}
+
+.add-plant-form-container input{
+  margin-left: 10px;
+  border: 1px  solid #ccc;
+  background-color: #fff;
+}
+
+.add-plant-form-container .form-group{
+  float: right;
+  margin-right: 10%;
+}
+
+.add-plant-image-container{
+  width: 40%;
+  float: left;
+  position: relative;
+  margin-left: 20px;
+}
+
+.add-plant-box-image{
+  width: 200px;
+  height: 200px;
+  border: 1px grey solid;
+}
+
+.button-add-image {
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+  margin-left: 40%;
+}
+
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */

@@ -8,7 +8,7 @@
 angular.module('gardenFront')
   .controller('fileUploadCtrl', function ($scope, $http) {
 
-    var uploadScriptUrl = 'http://localhost:3000/api/image/5540e58953ab32d312000005';
+    var uploadScriptUrl = 'http://localhost:3000/api/images/5540e58953ab32d312000005';
 
     $scope.options = {
       url: uploadScriptUrl
