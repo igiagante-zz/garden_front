@@ -1,0 +1,34 @@
+<div class="box">
+
+  <div class="plant-text-ph-ec">
+    <label>{{plant.phSoil}}, {{plant.ecSoil}}</label>
+  </div>
+
+  <!-- vertical bar -->
+  <div id="x" class="bar vertical-bar">
+    <ul class="week-reset">
+      <li class="week first-week state1"></li>
+      <li class="week state1"></li>
+      <li class="week state2"></li>
+      <li class="week state2"></li>
+      <li class="week state2"></li>
+      <li class="week state3"></li>
+      <li class="week state3"></li>
+      <li class="week state3"></li>
+      <li class="week state4"></li>
+      <li class="week last-week state4"></li>
+    </ul>
+    <img src="../assets/images/water.png" alt="beautiful" style="width: 25px; margin-left: -8px;"/>
+  </div>
+
+  <div class="lightbox">
+    <img src="{{plant.url}}" alt="beautiful"/>
+  </div>
+
+  <div class="plant-name">
+    <button type="button" id="plant-button-name" popover-placement="right"
+            popover-trigger="click" popover="{{dynamicPopover.content}}">
+      {{plant.name}}
+    </button>
+  </div>
+</div>
